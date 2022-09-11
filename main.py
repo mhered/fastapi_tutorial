@@ -1,7 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI # 1) import FastAPI
 
-app = FastAPI()
+my_app = FastAPI()  # 2) create a FastAPI instance in the variable my_app
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World!"}
+@my_app.get("/")  # 3) define a path operation decorator for GET requests to the URL "/"
+async def root():  # 4) write the path operation function
+    return {"message": "Hello World!"}  # 5) return the content
